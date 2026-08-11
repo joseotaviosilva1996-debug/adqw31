@@ -1102,3 +1102,39 @@ footer {
     color: #b3261e;
 
 }
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    z-index: 1000;
+    transition: right 0.3s ease;
+}
+
+.menu-lateral.ativo {
+    right: 0;
+}
+
+.fundo-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+    transition: 0.3s ease;
+}
+
+.fundo-menu.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.botao-menu {
+    cursor: pointer;
+    font-size: 28px;
+    border: none;
+    background: transparent;
+}
