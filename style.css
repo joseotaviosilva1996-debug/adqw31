@@ -1025,3 +1025,431 @@ footer {
     }
 
 }
+/* ======================================================
+   COMPRA DE GADO
+====================================================== */
+
+.pagina-titulo {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+.pagina-titulo h2 {
+    margin-bottom: 8px;
+}
+
+
+.pagina-titulo p {
+    color: #666;
+
+    line-height: 1.5;
+}
+
+
+/* ======================================================
+   FORMULÁRIO DE COMPRA
+====================================================== */
+
+.compra-formulario {
+    margin-bottom: 25px;
+}
+
+
+.compra-formulario form {
+    padding: 25px;
+}
+
+
+.compra-formulario h2 {
+    margin-bottom: 20px;
+}
+
+
+.titulo-secao {
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #ddd;
+}
+
+
+.linha-formulario {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.linha-formulario .campo {
+    margin-bottom: 15px;
+}
+
+
+.botao-principal {
+    width: 100%;
+
+    margin-top: 15px;
+
+    background: #2f7d46;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+.botao-principal:hover {
+    background: #245f36;
+
+    opacity: 1;
+}
+
+
+/* ======================================================
+   RESULTADO
+====================================================== */
+
+.resultado-compra {
+    margin-bottom: 25px;
+}
+
+
+.resultado-cabecalho {
+    background: #246b3a;
+
+    color: white;
+
+    padding: 20px;
+
+    border-radius:
+        18px 18px 0 0;
+}
+
+
+.resultado-status {
+    padding: 25px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.resultado-status > span {
+    font-size: 45px;
+}
+
+
+.resultado-status strong {
+    font-size: 15px;
+}
+
+
+.resultado-status h2 {
+    font-size: 30px;
+
+    margin: 5px 0;
+}
+
+
+.resultado-status p {
+    color: #666;
+}
+
+
+.resultado-lucro {
+    border-left:
+        6px solid #2e7d32;
+}
+
+
+.resultado-prejuizo {
+    border-left:
+        6px solid #c62828;
+}
+
+
+/* ======================================================
+   CARDS DO RESULTADO
+====================================================== */
+
+.resultado-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    background: white;
+
+    padding: 20px;
+}
+
+
+.resultado-card {
+    background: #f5f7f5;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.resultado-card span {
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+.resultado-card strong {
+    font-size: 18px;
+}
+
+
+/* ======================================================
+   DETALHAMENTO
+====================================================== */
+
+.detalhes-custos {
+    background: white;
+
+    padding: 25px;
+
+    border-radius:
+        0 0 18px 18px;
+}
+
+
+.detalhes-custos h3 {
+    margin-bottom: 15px;
+}
+
+
+.detalhes-custos p {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 10px 0;
+
+    border-bottom:
+        1px solid #eee;
+}
+
+
+.detalhes-custos hr {
+    border: none;
+
+    border-top:
+        2px solid #ddd;
+
+    margin: 10px 0;
+}
+
+
+.total-destaque {
+    font-size: 18px;
+
+    border-bottom: none !important;
+}
+
+
+/* ======================================================
+   HISTÓRICO
+====================================================== */
+
+.historico-compras {
+    margin-bottom: 30px;
+}
+
+
+.historico-compras > h2 {
+    margin-bottom: 15px;
+}
+
+
+.compra-historico-card {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    margin-bottom: 15px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+.compra-historico-topo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+.compra-historico-topo h3 {
+    margin-bottom: 5px;
+}
+
+
+.compra-historico-topo p {
+    color: #666;
+}
+
+
+.tag-lucro,
+.tag-prejuizo {
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+.tag-lucro {
+    background: #e8f5e9;
+
+    color: #2e7d32;
+}
+
+
+.tag-prejuizo {
+    background: #ffebee;
+
+    color: #c62828;
+}
+
+
+.compra-historico-dados {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+.compra-historico-dados p {
+    padding: 8px;
+
+    background: #f6f7f6;
+
+    border-radius: 8px;
+}
+
+
+.compra-acoes {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.compra-acoes button {
+    flex: 1;
+}
+
+
+/* ======================================================
+   RESPONSIVIDADE
+====================================================== */
+
+@media (max-width: 800px) {
+
+    .linha-formulario {
+        grid-template-columns: 1fr;
+    }
+
+
+    .resultado-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .resultado-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .resultado-status {
+        padding: 20px;
+    }
+
+
+    .resultado-status h2 {
+        font-size: 25px;
+    }
+
+
+    .compra-historico-topo {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .compra-historico-dados {
+        grid-template-columns: 1fr;
+    }
+
+
+    .compra-acoes {
+        flex-direction: column;
+    }
+
+
+    .detalhes-custos p {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+}
