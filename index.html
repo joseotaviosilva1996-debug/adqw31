@@ -34,6 +34,74 @@
     </button>
 
 </header>
+<!-- FUNDO DO MENU -->
+<div
+    id="fundoMenu"
+    class="fundo-menu"
+    onclick="fecharMenu()"
+></div>
+
+
+<!-- MENU LATERAL -->
+<aside id="menuLateral" class="menu-lateral">
+
+    <div class="menu-cabecalho">
+
+        <div>
+            <h2>AgroNexo</h2>
+            <p>Fazenda</p>
+        </div>
+
+        <button
+            class="fechar-menu"
+            onclick="fecharMenu()"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <nav class="opcoes-menu">
+
+        <button onclick="irPara('index.html')">
+            🏠
+            <span>Início</span>
+        </button>
+
+        <button onclick="irPara('cadastro.html')">
+            🐂
+            <span>Rebanho</span>
+        </button>
+
+        <button onclick="irPara('pastos.html')">
+            🌱
+            <span>Pastos</span>
+        </button>
+
+        <button onclick="irPara('manejo.html')">
+            🚜
+            <span>Manejo</span>
+        </button>
+
+        <button onclick="irPara('cadastro.html')">
+            📋
+            <span>Cadastrar animal</span>
+        </button>
+
+    </nav>
+
+
+    <div class="menu-rodape">
+
+        <button onclick="sair()">
+            🚪
+            <span>Sair</span>
+        </button>
+
+    </div>
+
+</aside>
 
 <main class="dashboard">
 
