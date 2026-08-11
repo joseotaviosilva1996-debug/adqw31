@@ -1620,51 +1620,43 @@ mostrarPastos();
 mostrarManejos();
 
 atualizarDashboard();
-// =========================
+
+// ========================================
 // MENU LATERAL
-// =========================
+// ========================================
 
 function abrirMenu() {
 
-    const menu =
-        document.getElementById("menuLateral");
+    const menu = document.getElementById("menuLateral");
+    const fundo = document.getElementById("fundoMenu");
 
-    const fundo =
-        document.getElementById("fundoMenu");
-
-    if (menu && fundo) {
-
-        menu.classList.add("aberto");
-
-        fundo.classList.add("aberto");
-
+    if (!menu || !fundo) {
+        console.log("Menu não encontrado");
+        return;
     }
 
+    menu.classList.add("aberto");
+    fundo.classList.add("aberto");
 }
 
 
 function fecharMenu() {
 
-    const menu =
-        document.getElementById("menuLateral");
+    const menu = document.getElementById("menuLateral");
+    const fundo = document.getElementById("fundoMenu");
 
-    const fundo =
-        document.getElementById("fundoMenu");
-
-    if (menu && fundo) {
-
-        menu.classList.remove("aberto");
-
-        fundo.classList.remove("aberto");
-
+    if (!menu || !fundo) {
+        return;
     }
 
+    menu.classList.remove("aberto");
+    fundo.classList.remove("aberto");
 }
 
 
-// =========================
-// NAVEGAÇÃO
-// =========================
+// ========================================
+// NAVEGAÇÃO DO MENU
+// ========================================
 
 function irPara(pagina) {
 
@@ -1673,31 +1665,15 @@ function irPara(pagina) {
 }
 
 
-// =========================
-// SAIR
-// =========================
+// ========================================
+// BOTÃO SAIR
+// ========================================
 
 function sair() {
 
-    fecharMenu();
+    // Se você ainda não tem login,
+    // volta para a página inicial.
 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 
-}
-function abrirMenu() {
-    document.getElementById("menuLateral").classList.add("ativo");
-    document.getElementById("fundoMenu").classList.add("ativo");
-}
-
-function fecharMenu() {
-    document.getElementById("menuLateral").classList.remove("ativo");
-    document.getElementById("fundoMenu").classList.remove("ativo");
-}
-
-function irPara(pagina) {
-    window.location.href = pagina;
-}
-
-function sair() {
-    fecharMenu();
 }
