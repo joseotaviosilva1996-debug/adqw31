@@ -1,8 +1,13 @@
+/* ======================================================
+   RESET
+====================================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 
 body {
     font-family: Arial, sans-serif;
@@ -10,383 +15,345 @@ body {
     color: #222;
 }
 
-header {
-    background: #2f6b3f;
-    color: white;
-    padding: 25px;
-}
 
-header h1 {
-    margin-bottom: 8px;
-}
-
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 25px;
-}
-
-.boas-vindas {
-    margin-bottom: 25px;
-}
-
-.boas-vindas h2 {
-    margin-bottom: 8px;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-.icone {
-    font-size: 35px;
-}
-
-.card h3 {
-    font-size: 30px;
-    margin: 10px 0 5px;
-}
-
-.manejos {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-}
-
-.manejos h2 {
-    margin-bottom: 15px;
-}
-
-.manejo {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.acoes {
-    display: flex;
-    gap: 15px;
-}
-
-button {
-    flex: 1;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    background: #2f6b3f;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    opacity: 0.85;
-}
-
-@media (max-width: 600px) {
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .acoes {
-        flex-direction: column;
-    }
-}.campo {
-    margin-bottom: 18px;
-}
-
-.campo label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 7px;
-}
-
-.campo input,
-.campo select,
-.campo textarea {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-}
-
-.campo textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-form {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-#busca {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-
-    border: 1px solid #ccc;
-    border-radius: 10px;
-
-    font-size: 16px;
-}
-
-.animal {
-    margin-bottom: 15px;
-}
-
-.animal h3 {
-    margin-bottom: 15px;
-}
-
-.animal p {
-    margin-bottom: 7px;
-}
-
-.animal button {
-    width: 100%;
-}
-/* ========================================
-   TELA DE LOGIN
-======================================== */
-
-.tela-login {
-
-    min-height: 100vh;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #1f6b3a,
-            #2f8f4e
-        );
-
-}
-
-
-.login-container {
-
-    width: 90%;
-
-    max-width: 420px;
-
-    background: white;
-
-    padding: 40px;
-
-    border-radius: 20px;
-
-    text-align: center;
-
-    box-shadow:
-        0 15px 40px
-        rgba(0,0,0,0.20);
-
-}
-
-
-.login-logo {
-
-    font-size: 70px;
-
-    margin-bottom: 10px;
-
-}
-
-
-.login-container h1 {
-
-    margin-bottom: 8px;
-
-}
-
-
-.login-subtitulo {
-
-    color: #666;
-
-    margin-bottom: 30px;
-
-}
-
-
-.login-info {
-
-    margin-top: 25px;
-
-    font-size: 13px;
-
-    color: #888;
-
-}
-
-
-/* ========================================
-   CAMPOS DO LOGIN
-======================================== */
-
-.login-container .campo {
-
-    text-align: left;
-
-    margin-bottom: 18px;
-
-}
-
-
-.login-container input {
-
-    width: 100%;
-
-    padding: 13px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 10px;
-
-    box-sizing: border-box;
-
-    font-size: 16px;
-
-}
-
-
-.login-container input:focus {
-
-    outline: none;
-
-    border-color: #2f8f4e;
-
-}
-
-
-/* ========================================
-   BOTÃO LOGIN
-======================================== */
-
-.login-container button {
-
-    width: 100%;
-
-    padding: 14px;
-
-    border: none;
-
-    border-radius: 10px;
-
-    background: #2f8f4e;
-
-    color: white;
-
-    font-size: 17px;
-
-    cursor: pointer;
-
-}
-
-
-.login-container button:hover {
-
-    background: #245f36;
-
-}
-/* ========================================
-   NOVO DASHBOARD -     AgroNexo
-======================================== */
-
-
-/* TOPO */
+/* ======================================================
+   CABEÇALHO
+====================================================== */
 
 .topo {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
     padding: 20px 30px;
 
     background: #246b3a;
-
     color: white;
 
+    position: relative;
 }
 
 
 .topo h1 {
-
     margin: 0;
-
     font-size: 28px;
-
 }
 
 
 .topo p {
+    margin: 5px 0 0;
+    opacity: 0.9;
+}
 
+
+/* ======================================================
+   BOTÃO DO MENU
+====================================================== */
+
+.botao-menu {
+    width: 55px;
+    height: 55px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 1001;
+
+    flex: none;
+}
+
+
+.botao-menu:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+
+.botao-menu:active {
+    transform: scale(0.95);
+}
+
+
+/* ======================================================
+   FUNDO ESCURO DO MENU
+====================================================== */
+
+.fundo-menu {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    z-index: 2000;
+}
+
+
+.fundo-menu.aberto {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* ======================================================
+   MENU LATERAL
+====================================================== */
+
+.menu-lateral {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 310px;
+
+    max-width: 85%;
+
+    height: 100vh;
+
+    background: white;
+
+    z-index: 2001;
+
+    transform: translateX(100%);
+
+    transition:
+        transform 0.3s ease;
+
+    box-shadow:
+        -5px 0 25px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.menu-lateral.aberto {
+    transform: translateX(0);
+}
+
+
+/* ======================================================
+   CABEÇALHO DO MENU
+====================================================== */
+
+.menu-cabecalho {
+    background: #24733d;
+
+    color: white;
+
+    padding: 25px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.menu-cabecalho h2 {
+    margin: 0;
+
+    font-size: 25px;
+}
+
+
+.menu-cabecalho p {
     margin: 5px 0 0;
 
-    opacity: 0.9;
-
+    font-size: 16px;
 }
 
 
-/* BOTÃO SAIR */
+.fechar-menu {
+    width: 45px !important;
+    height: 45px;
 
-.botao-sair {
+    padding: 0 !important;
 
-    width: auto !important;
+    border: none;
 
-    padding: 10px 18px !important;
+    background: transparent !important;
 
-    background: rgba(255,255,255,0.15) !important;
+    color: white;
 
-    border: 1px solid rgba(255,255,255,0.5) !important;
+    font-size: 40px;
 
+    cursor: pointer;
+
+    line-height: 1;
+
+    flex: none !important;
 }
 
 
-/* DASHBOARD */
+.fechar-menu:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+
+/* ======================================================
+   OPÇÕES DO MENU
+====================================================== */
+
+.opcoes-menu {
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    overflow-y: auto;
+}
+
+
+.opcoes-menu button {
+    width: 100%;
+
+    min-height: 55px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    color: #222;
+
+    font-size: 18px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex: none;
+}
+
+
+.opcoes-menu button:hover {
+    background: #eef7f0;
+}
+
+
+.opcoes-menu button:active {
+    background: #dceee0;
+
+    transform: scale(0.98);
+}
+
+
+.opcoes-menu button span {
+    color: #222;
+}
+
+
+/* ======================================================
+   RODAPÉ DO MENU
+====================================================== */
+
+.menu-rodape {
+    margin-top: auto;
+
+    padding: 15px;
+
+    border-top: 1px solid #ddd;
+}
+
+
+.menu-rodape button {
+    width: 100%;
+
+    min-height: 55px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    color: #222;
+
+    font-size: 18px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex: none;
+}
+
+
+.menu-rodape button:hover {
+    background: #fff0f0;
+}
+
+
+/* ======================================================
+   DASHBOARD
+====================================================== */
 
 .dashboard {
-
     width: 90%;
 
     max-width: 1000px;
 
     margin: 25px auto;
-
 }
 
 
-/* FOTO */
+/* ======================================================
+   FOTO DA FAZENDA
+====================================================== */
 
 .foto-capa {
-
     height: 280px;
 
     position: relative;
@@ -403,29 +370,23 @@ form {
         );
 
     margin-bottom: 25px;
-
 }
 
 
 .foto-capa img {
-
     width: 100%;
 
     height: 100%;
 
     object-fit: cover;
-
 }
 
 
 .foto-texto {
-
     position: absolute;
 
     left: 0;
-
     right: 0;
-
     bottom: 0;
 
     padding: 30px;
@@ -435,48 +396,28 @@ form {
     background:
         linear-gradient(
             transparent,
-            rgba(0,0,0,0.75)
+            rgba(0, 0, 0, 0.75)
         );
-
 }
 
 
 .foto-texto h2 {
-
     margin: 0;
 
     font-size: 30px;
-
 }
 
 
 .foto-texto p {
-
     margin: 8px 0 0;
-
 }
 
 
-/* BOAS VINDAS */
-
-.boas-vindas {
-
-    margin-bottom: 20px;
-
-}
-
-
-.boas-vindas h2 {
-
-    margin-bottom: 5px;
-
-}
-
-
-/* CARDS */
+/* ======================================================
+   RESUMO
+====================================================== */
 
 .resumo {
-
     display: grid;
 
     grid-template-columns:
@@ -485,12 +426,10 @@ form {
     gap: 15px;
 
     margin-bottom: 25px;
-
 }
 
 
 .card-resumo {
-
     background: white;
 
     border-radius: 18px;
@@ -501,49 +440,39 @@ form {
 
     box-shadow:
         0 5px 18px
-        rgba(0,0,0,0.08);
-
-    cursor: pointer;
+        rgba(0, 0, 0, 0.08);
 
     transition: 0.2s;
-
 }
 
 
 .card-resumo:hover {
-
     transform: translateY(-4px);
-
 }
 
 
 .card-resumo .icone {
-
     font-size: 42px;
-
 }
 
 
 .card-resumo h2 {
-
     font-size: 30px;
 
     margin: 8px 0 0;
-
 }
 
 
 .card-resumo p {
-
     margin: 5px 0 0;
-
 }
 
 
-/* MANEJOS */
+/* ======================================================
+   EXPLICAÇÃO
+====================================================== */
 
-.proximos {
-
+.explicacao {
     background: white;
 
     padding: 25px;
@@ -552,177 +481,344 @@ form {
 
     box-shadow:
         0 5px 18px
-        rgba(0,0,0,0.08);
+        rgba(0, 0, 0, 0.08);
 
     margin-bottom: 25px;
-
 }
 
 
-.proximos h2 {
-
-    margin-top: 0;
-
+.explicacao h2 {
+    margin-bottom: 12px;
 }
 
 
-.manejo {
+.explicacao p {
+    margin-bottom: 10px;
 
-    display: flex;
-
-    justify-content: space-between;
-
-    padding: 16px 0;
-
-    border-bottom: 1px solid #ddd;
-
+    line-height: 1.5;
 }
 
 
-.manejo:last-child {
+/* ======================================================
+   CARDS GERAIS
+====================================================== */
 
-    border-bottom: none;
+.card {
+    background: white;
 
-}
-
-
-/* MENU */
-
-.menu-principal {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 15px;
-
-}
-
-
-.menu-principal button {
-
-    min-height: 70px;
-
-    border: none;
+    padding: 25px;
 
     border-radius: 15px;
 
-    background: #2f7d46;
+    text-align: center;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 15px;
+}
+
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    margin-bottom: 8px;
+}
+
+
+/* ======================================================
+   BOTÕES GERAIS
+====================================================== */
+
+button {
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2f6b3f;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* ======================================================
+   BOTÃO PERIGO
+====================================================== */
+
+.botao-perigo {
+    background: #c62828 !important;
+
+    color: white !important;
+
+    margin-top: 10px;
+}
+
+
+.botao-perigo:hover {
+    background: #a51f1f !important;
+}
+
+
+/* ======================================================
+   FORMULÁRIOS
+====================================================== */
+
+form {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+.campo {
+    margin-bottom: 18px;
+}
+
+
+.campo label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-family: Arial, sans-serif;
+}
+
+
+.campo textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+/* ======================================================
+   BUSCA
+====================================================== */
+
+#busca,
+#buscaAnimal {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+
+/* ======================================================
+   ANIMAIS
+====================================================== */
+
+.animal {
+    margin-bottom: 15px;
+}
+
+
+.animal h3 {
+    margin-bottom: 15px;
+}
+
+
+.animal p {
+    margin-bottom: 7px;
+}
+
+
+.animal button {
+    width: 100%;
+}
+
+
+.animal-card {
+    margin-bottom: 15px;
+}
+
+
+.animal-icone {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+.animal-foto-grande {
+    font-size: 100px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ======================================================
+   LOGIN
+====================================================== */
+
+.tela-login {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1f6b3a,
+            #2f8f4e
+        );
+}
+
+
+.login-container {
+    width: 90%;
+
+    max-width: 420px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.20);
+}
+
+
+.login-logo {
+    font-size: 70px;
+
+    margin-bottom: 10px;
+}
+
+
+.login-container h1 {
+    margin-bottom: 8px;
+}
+
+
+.login-subtitulo {
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+.login-info {
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    color: #888;
+}
+
+
+.login-container .campo {
+    text-align: left;
+
+    margin-bottom: 18px;
+}
+
+
+.login-container input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    font-size: 16px;
+}
+
+
+.login-container input:focus {
+    outline: none;
+
+    border-color: #2f8f4e;
+}
+
+
+.login-container button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2f8f4e;
 
     color: white;
 
     font-size: 17px;
 
     cursor: pointer;
-
 }
 
 
-.menu-principal button:hover {
-
+.login-container button:hover {
     background: #245f36;
-
 }
 
 
-.menu-principal button span {
-
-    margin-left: 8px;
-
-}
-
-
-/* RODAPÉ */
-
-footer {
-
-    text-align: center;
-
-    padding: 25px;
-
-    color: #777;
-
-    font-size: 13px;
-
-}
-
-
-/* CELULAR */
-
-@media (max-width: 700px) {
-
-    .topo {
-
-        padding: 15px;
-
-    }
-
-
-    .topo h1 {
-
-        font-size: 21px;
-
-    }
-
-
-    .dashboard {
-
-        width: 94%;
-
-    }
-
-
-    .foto-capa {
-
-        height: 230px;
-
-    }
-
-
-    .foto-texto {
-
-        padding: 20px;
-
-    }
-
-
-    .foto-texto h2 {
-
-        font-size: 24px;
-
-    }
-
-
-    .resumo {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .menu-principal {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .manejo {
-
-        flex-direction: column;
-
-        gap: 5px;
-
-    }
-
-}
-/* ========================================
+/* ======================================================
    FINANCEIRO
-======================================== */
+====================================================== */
 
 .resumo-financeiro {
-
     display: grid;
 
     grid-template-columns:
@@ -731,12 +827,10 @@ footer {
     gap: 15px;
 
     margin-bottom: 25px;
-
 }
 
 
 .finance-card {
-
     background: white;
 
     padding: 25px;
@@ -747,65 +841,49 @@ footer {
 
     box-shadow:
         0 5px 18px
-        rgba(0,0,0,0.08);
-
+        rgba(0, 0, 0, 0.08);
 }
 
 
 .finance-card div {
-
     font-size: 40px;
-
 }
 
 
 .finance-card strong {
-
     font-size: 23px;
-
 }
 
 
 .finance-card.entrada {
-
     border-top:
         5px solid #2e7d32;
-
 }
 
 
 .finance-card.saida {
-
     border-top:
         5px solid #c62828;
-
 }
 
 
 .finance-card.saldo {
-
     border-top:
         5px solid #1565c0;
-
 }
 
 
 .valor-entrada {
-
     color: #2e7d32;
-
 }
 
 
 .valor-saida {
-
     color: #c62828;
-
 }
 
 
 .financeiro-linha {
-
     display: flex;
 
     justify-content: space-between;
@@ -813,297 +891,137 @@ footer {
     align-items: center;
 
     gap: 20px;
-
 }
 
 
 .financeiro-item {
-
     margin-bottom: 15px;
-
 }
 
 
+/* ======================================================
+   RODAPÉ
+====================================================== */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* ======================================================
+   RESPONSIVIDADE
+====================================================== */
+
 @media (max-width: 700px) {
 
-    .resumo-financeiro {
+    .topo {
+        padding: 15px;
+    }
 
+
+    .topo h1 {
+        font-size: 21px;
+    }
+
+
+    .botao-menu {
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 27px;
+    }
+
+
+    .dashboard {
+        width: 94%;
+
+        margin-top: 20px;
+    }
+
+
+    .foto-capa {
+        height: 230px;
+    }
+
+
+    .foto-texto {
+        padding: 20px;
+    }
+
+
+    .foto-texto h2 {
+        font-size: 24px;
+    }
+
+
+    .resumo {
         grid-template-columns: 1fr;
+    }
 
+
+    .resumo-financeiro {
+        grid-template-columns: 1fr;
+    }
+
+
+    .menu-lateral {
+        width: 300px;
+
+        max-width: 88%;
+    }
+
+
+    .opcoes-menu button {
+        font-size: 17px;
+
+        padding: 15px;
+    }
+
+
+    .login-container {
+        padding: 30px 20px;
     }
 
 
     .financeiro-linha {
-
         flex-direction: column;
 
         align-items: flex-start;
-
     }
 
 }
-/* ========================================
-   BOTÃO MENU
-======================================== */
 
-.botao-menu {
 
-    position: absolute;
+/* ======================================================
+   CELULAR PEQUENO
+====================================================== */
 
-    right: 20px;
-    top: 20px;
+@media (max-width: 400px) {
 
-    width: 55px;
-    height: 55px;
+    .menu-lateral {
+        width: 280px;
+    }
 
-    border: none;
 
-    border-radius: 15px;
+    .menu-cabecalho {
+        padding: 20px 15px;
+    }
 
-    background: rgba(255, 255, 255, 0.18);
 
-    color: white;
+    .opcoes-menu {
+        padding: 10px;
+    }
 
-    font-size: 30px;
 
-    cursor: pointer;
+    .menu-rodape {
+        padding: 10px;
+    }
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    z-index: 1000;
 }
-
-
-/* ========================================
-   FUNDO ESCURO
-======================================== */
-
-.fundo-menu {
-
-    position: fixed;
-
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    background: rgba(0, 0, 0, 0.45);
-
-    z-index: 998;
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    transition: 0.3s;
-}
-
-
-.fundo-menu.aberto {
-
-    opacity: 1;
-
-    visibility: visible;
-}
-
-
-/* ========================================
-   MENU LATERAL
-======================================== */
-
-.menu-lateral {
-
-    position: fixed;
-
-    top: 0;
-    right: 0;
-
-    width: 300px;
-
-    max-width: 85%;
-
-    height: 100vh;
-
-    background: white;
-
-    z-index: 999;
-
-    transform: translateX(100%);
-
-    transition: transform 0.3s ease;
-
-    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.25);
-
-    display: flex;
-
-    flex-direction: column;
-}
-
-
-.menu-lateral.aberto {
-
-    transform: translateX(0);
-}
-
-
-/* ========================================
-   CABEÇALHO DO MENU
-======================================== */
-
-.menu-cabecalho {
-
-    background: #24733d;
-
-    color: white;
-
-    padding: 25px 20px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-
-.menu-cabecalho h2 {
-
-    margin: 0;
-
-    font-size: 25px;
-}
-
-
-.menu-cabecalho p {
-
-    margin: 5px 0 0;
-
-    font-size: 16px;
-}
-
-
-.fechar-menu {
-
-    border: none;
-
-    background: transparent;
-
-    color: white;
-
-    font-size: 40px;
-
-    cursor: pointer;
-
-    line-height: 1;
-}
-
-
-/* ========================================
-   OPÇÕES
-======================================== */
-
-.opcoes-menu {
-
-    padding: 15px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 5px;
-
-    overflow-y: auto;
-}
-
-
-.opcoes-menu button {
-
-    width: 100%;
-
-    border: none;
-
-    background: transparent;
-
-    padding: 16px;
-
-    border-radius: 12px;
-
-    font-size: 18px;
-
-    text-align: left;
-
-    cursor: pointer;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-}
-
-
-.opcoes-menu button:hover {
-
-    background: #eef7f0;
-}
-
-
-.opcoes-menu button:active {
-
-    background: #dceee0;
-
-    transform: scale(0.98);
-}
-
-
-.opcoes-menu span {
-
-    color: #222;
-}
-
-
-/* ========================================
-   RODAPÉ DO MENU
-======================================== */
-
-.menu-rodape {
-
-    margin-top: auto;
-
-    padding: 15px;
-
-    border-top: 1px solid #ddd;
-}
-
-
-.menu-rodape button {
-
-    width: 100%;
-
-    border: none;
-
-    background: transparent;
-
-    padding: 16px;
-
-    border-radius: 12px;
-
-    font-size: 18px;
-
-    text-align: left;
-
-    cursor: pointer;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-}
-
-    
-    
