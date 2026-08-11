@@ -842,9 +842,9 @@ footer {
     }
 
 }
-/* =========================
-   BOTÃO DO MENU
-========================= */
+/* ========================================
+   BOTÃO MENU
+======================================== */
 
 .botao-menu {
 
@@ -857,6 +857,7 @@ footer {
     height: 55px;
 
     border: none;
+
     border-radius: 15px;
 
     background: rgba(255, 255, 255, 0.18);
@@ -868,30 +869,27 @@ footer {
     cursor: pointer;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    transition: 0.2s;
-
+    z-index: 1000;
 }
 
 
-.botao-menu:active {
-
-    transform: scale(0.92);
-
-}
-
-
-/* =========================
+/* ========================================
    FUNDO ESCURO
-========================= */
+======================================== */
 
 .fundo-menu {
 
     position: fixed;
 
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
     background: rgba(0, 0, 0, 0.45);
 
@@ -902,7 +900,6 @@ footer {
     visibility: hidden;
 
     transition: 0.3s;
-
 }
 
 
@@ -911,13 +908,12 @@ footer {
     opacity: 1;
 
     visibility: visible;
-
 }
 
 
-/* =========================
+/* ========================================
    MENU LATERAL
-========================= */
+======================================== */
 
 .menu-lateral {
 
@@ -927,7 +923,8 @@ footer {
     right: 0;
 
     width: 300px;
-    max-width: 85vw;
+
+    max-width: 85%;
 
     height: 100vh;
 
@@ -939,25 +936,23 @@ footer {
 
     transition: transform 0.3s ease;
 
-    box-shadow: -5px 0 25px rgba(0,0,0,0.2);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.25);
 
     display: flex;
 
     flex-direction: column;
-
 }
 
 
 .menu-lateral.aberto {
 
     transform: translateX(0);
-
 }
 
 
-/* =========================
-   CABEÇALHO
-========================= */
+/* ========================================
+   CABEÇALHO DO MENU
+======================================== */
 
 .menu-cabecalho {
 
@@ -972,7 +967,6 @@ footer {
     align-items: center;
 
     justify-content: space-between;
-
 }
 
 
@@ -981,16 +975,14 @@ footer {
     margin: 0;
 
     font-size: 25px;
-
 }
 
 
 .menu-cabecalho p {
 
-    margin: 4px 0 0;
+    margin: 5px 0 0;
 
     font-size: 16px;
-
 }
 
 
@@ -1007,13 +999,12 @@ footer {
     cursor: pointer;
 
     line-height: 1;
-
 }
 
 
-/* =========================
+/* ========================================
    OPÇÕES
-========================= */
+======================================== */
 
 .opcoes-menu {
 
@@ -1023,12 +1014,72 @@ footer {
 
     flex-direction: column;
 
-    gap: 8px;
+    gap: 5px;
 
+    overflow-y: auto;
 }
 
 
-.opcoes-menu button,
+.opcoes-menu button {
+
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.opcoes-menu button:hover {
+
+    background: #eef7f0;
+}
+
+
+.opcoes-menu button:active {
+
+    background: #dceee0;
+
+    transform: scale(0.98);
+}
+
+
+.opcoes-menu span {
+
+    color: #222;
+}
+
+
+/* ========================================
+   RODAPÉ DO MENU
+======================================== */
+
+.menu-rodape {
+
+    margin-top: auto;
+
+    padding: 15px;
+
+    border-top: 1px solid #ddd;
+}
+
+
 .menu-rodape button {
 
     width: 100%;
@@ -1052,89 +1103,7 @@ footer {
     align-items: center;
 
     gap: 15px;
-
 }
 
-
-.opcoes-menu button:hover,
-.menu-rodape button:hover {
-
-    background: #eef7f0;
-
-}
-
-
-.opcoes-menu button:active,
-.menu-rodape button:active {
-
-    background: #dceee0;
-
-    transform: scale(0.98);
-
-}
-
-
-.opcoes-menu button span,
-.menu-rodape button span {
-
-    color: #222;
-
-}
-
-
-/* =========================
-   RODAPÉ
-========================= */
-
-.menu-rodape {
-
-    margin-top: auto;
-
-    padding: 15px;
-
-    border-top: 1px solid #ddd;
-
-}
-
-
-.menu-rodape button {
-
-    color: #b3261e;
-
-}
-.menu-lateral {
-    position: fixed;
-    top: 0;
-    right: -320px;
-    width: 300px;
-    height: 100vh;
-    background: white;
-    z-index: 1000;
-    transition: right 0.3s ease;
-}
-
-.menu-lateral.ativo {
-    right: 0;
-}
-
-.fundo-menu {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 999;
-    transition: 0.3s ease;
-}
-
-.fundo-menu.ativo {
-    opacity: 1;
-    visibility: visible;
-}
-
-.botao-menu {
-    cursor: pointer;
-    font-size: 28px;
-    border: none;
-    background: transparent;
-}
+    
+    
