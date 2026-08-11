@@ -1620,3 +1620,67 @@ mostrarPastos();
 mostrarManejos();
 
 atualizarDashboard();
+// =========================
+// MENU LATERAL
+// =========================
+
+function abrirMenu() {
+
+    const menu =
+        document.getElementById("menuLateral");
+
+    const fundo =
+        document.getElementById("fundoMenu");
+
+    if (menu && fundo) {
+
+        menu.classList.add("aberto");
+
+        fundo.classList.add("aberto");
+
+    }
+
+}
+
+
+function fecharMenu() {
+
+    const menu =
+        document.getElementById("menuLateral");
+
+    const fundo =
+        document.getElementById("fundoMenu");
+
+    if (menu && fundo) {
+
+        menu.classList.remove("aberto");
+
+        fundo.classList.remove("aberto");
+
+    }
+
+}
+
+
+// =========================
+// NAVEGAÇÃO
+// =========================
+
+function irPara(pagina) {
+
+    window.location.href = pagina;
+
+}
+
+
+// =========================
+// SAIR
+// =========================
+
+function sair() {
+
+    fecharMenu();
+
+    window.location.href = "login.html";
+
+}
