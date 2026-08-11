@@ -16,14 +16,28 @@
 
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
 
 <header class="topo">
 
     <div>
-        <h1>AgroNexo</h1>
-        <p>Fazenda</p>
+
+        <h1>
+            AgroNexo
+        </h1>
+
+        <p>
+            Fazenda
+        </p>
+
     </div>
+
 
     <button
         class="botao-menu"
@@ -34,7 +48,13 @@
     </button>
 
 </header>
-<!-- FUNDO DO MENU -->
+
+
+
+<!-- =========================
+     FUNDO DO MENU
+========================= -->
+
 <div
     id="fundoMenu"
     class="fundo-menu"
@@ -42,19 +62,38 @@
 ></div>
 
 
-<!-- MENU LATERAL -->
-<aside id="menuLateral" class="menu-lateral">
+
+<!-- =========================
+     MENU LATERAL
+========================= -->
+
+<aside
+    id="menuLateral"
+    class="menu-lateral"
+>
+
+
+    <!-- CABEÇALHO DO MENU -->
 
     <div class="menu-cabecalho">
 
         <div>
-            <h2>AgroNexo</h2>
-            <p>Fazenda</p>
+
+            <h2>
+                AgroNexo
+            </h2>
+
+            <p>
+                Fazenda
+            </p>
+
         </div>
+
 
         <button
             class="fechar-menu"
             onclick="fecharMenu()"
+            aria-label="Fechar menu"
         >
             ×
         </button>
@@ -62,53 +101,180 @@
     </div>
 
 
+
+    <!-- OPÇÕES -->
+
     <nav class="opcoes-menu">
 
-        <button onclick="irPara('index.html')">
+
+        <!-- INÍCIO -->
+
+        <button
+            onclick="irPara('index.html')"
+        >
+
             🏠
-            <span>Início</span>
+
+            <span>
+                Início
+            </span>
+
         </button>
 
-        <button onclick="irPara('cadastro.html')">
+
+
+        <!-- REBANHO -->
+
+        <button
+            onclick="irPara('cadastro.html')"
+        >
+
             🐂
-            <span>Rebanho</span>
+
+            <span>
+                Rebanho
+            </span>
+
         </button>
 
-        <button onclick="irPara('pastos.html')">
+
+
+        <!-- PASTOS -->
+
+        <button
+            onclick="irPara('pastos.html')"
+        >
+
             🌱
-            <span>Pastos</span>
+
+            <span>
+                Pastos
+            </span>
+
         </button>
 
-        <button onclick="irPara('manejo.html')">
+
+
+        <!-- MANEJO -->
+
+        <button
+            onclick="irPara('manejo.html')"
+        >
+
             🚜
-            <span>Manejo</span>
+
+            <span>
+                Manejo
+            </span>
+
         </button>
 
-        <button onclick="irPara('cadastro.html')">
+
+
+        <!-- CADASTRO -->
+
+        <button
+            onclick="irPara('cadastro.html')"
+        >
+
             📋
-            <span>Cadastrar animal</span>
+
+            <span>
+                Cadastrar animal
+            </span>
+
         </button>
+
+
+
+        <!-- FINANCEIRO -->
+
+        <button
+            onclick="irPara('financeiro.html')"
+        >
+
+            💰
+
+            <span>
+                Financeiro
+            </span>
+
+        </button>
+
+
+
+        <!-- RELATÓRIOS -->
+
+        <button
+            onclick="irPara('relatorios.html')"
+        >
+
+            📊
+
+            <span>
+                Relatórios
+            </span>
+
+        </button>
+
+
+
+        <!-- CONFIGURAÇÕES -->
+
+        <button
+            onclick="irPara('configuracoes.html')"
+        >
+
+            ⚙️
+
+            <span>
+                Configurações
+            </span>
+
+        </button>
+
 
     </nav>
 
 
+
+    <!-- RODAPÉ DO MENU -->
+
     <div class="menu-rodape">
 
-        <button onclick="sair()">
+        <button
+            onclick="sair()"
+        >
+
             🚪
-            <span>Sair</span>
+
+            <span>
+                Sair
+            </span>
+
         </button>
 
     </div>
 
+
 </aside>
+
+
+
+<!-- =========================
+     CONTEÚDO PRINCIPAL
+========================= -->
 
 <main class="dashboard">
 
 
-    <!-- FOTO -->
+
+    <!-- =========================
+         FOTO DA FAZENDA
+    ========================= -->
 
     <section class="foto-capa">
+
 
         <img
             src="img/fazenda.jpg"
@@ -116,106 +282,134 @@
             onerror="this.style.display='none'"
         >
 
+
         <div class="foto-texto">
+
 
             <h2>
                 Fazenda
             </h2>
 
+
             <p>
                 Controle do rebanho e da propriedade
             </p>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- RESUMO -->
+
+    <!-- =========================
+         RESUMO
+    ========================= -->
 
     <section class="resumo">
 
 
-        <div
-            class="card-resumo"
-            onclick="abrirGado()"
-        >
+
+        <!-- BOVINOS -->
+
+        <div class="card-resumo">
+
 
             <div class="icone">
                 🐂
             </div>
 
+
             <h2 id="totalBovinos">
                 0
             </h2>
+
 
             <p>
                 Bovinos
             </p>
 
+
         </div>
 
 
-        <div
-            class="card-resumo"
-            onclick="abrirPastos()"
-        >
+
+        <!-- PASTOS -->
+
+        <div class="card-resumo">
+
 
             <div class="icone">
                 🌱
             </div>
 
+
             <h2 id="totalPastos">
                 0
             </h2>
+
 
             <p>
                 Pastos
             </p>
 
+
         </div>
 
 
-        <div
-            class="card-resumo"
-            onclick="abrirManejo()"
-        >
+
+        <!-- MANEJOS -->
+
+        <div class="card-resumo">
+
 
             <div class="icone">
-                💉
+                🚜
             </div>
+
 
             <h2 id="totalManejos">
                 0
             </h2>
 
+
             <p>
                 Manejos
             </p>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- MENU -->
 
-    <section class="menu-principal">
+    <!-- =========================
+         EXPLICAÇÃO
+    ========================= -->
 
-        <button onclick="abrirGado()">
-            🐂
-            <span>Rebanho</span>
-        </button>
+    <section class="explicacao">
 
-        <button onclick="abrirPastos()">
-            🌱
-            <span>Pastos</span>
-        </button>
 
-        <button onclick="abrirManejo()">
-            💉
-            <span>Manejo</span>
-        </button>
+        <h2>
+            Bem-vindo ao AgroNexo
+        </h2>
+
+
+        <p>
+            Controle o rebanho, os pastos,
+            o manejo e as informações da
+            propriedade em um só lugar.
+        </p>
+
+
+        <p>
+            Toque no botão ☰ para acessar
+            todas as funções do aplicativo.
+        </p>
+
 
     </section>
 
@@ -223,14 +417,25 @@
 </main>
 
 
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
 <footer>
 
-    Fazenda Control • Controle inteligente da propriedade
+    AgroNexo • Controle inteligente da propriedade
 
 </footer>
 
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script src="script.js"></script>
+
 
 </body>
 
