@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Rebanho - Fazenda Control</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="topo">
+
+    <div>
+        <h1>🐂 Rebanho</h1>
+
+        <p>
+            Animais cadastrados
+        </p>
+    </div>
+
+    <button
+        class="botao-sair"
+        onclick="sair()"
+    >
+        🚪 Sair
+    </button>
+
+</header>
+
+
+<main class="dashboard">
+
+
+    <div class="barra-acoes">
+
+        <button onclick="cadastrarAnimal()">
+            ➕ Novo animal
+        </button>
+
+        <button onclick="voltarInicio()">
+            🏠 Início
+        </button>
+
+    </div>
+
+
+    <div class="campo">
+
+        <label>
+            🔎 Procurar animal
+        </label>
+
+        <input
+            type="text"
+            id="buscaAnimal"
+            placeholder="Brinco ou nome..."
+        >
+
+    </div>
+
+
+    <div id="listaAnimais"></div>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

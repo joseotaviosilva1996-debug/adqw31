@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cadastro de Animal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="topo">
+
+    <h1>
+        🐂 Cadastro de animal
+    </h1>
+
+</header>
+
+
+<main class="dashboard">
+
+
+    <form id="formAnimal">
+
+
+        <div class="campo">
+
+            <label>
+                Número do brinco *
+            </label>
+
+            <input
+                type="text"
+                id="brinco"
+                required
+            >
+
+        </div>
+
+
+        <div class="campo">
+
+            <label>
+                Nome
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+            >
+
+        </div>
+
+
+        <div class="campo">
+
+    <label>
+        Raça
+    </label>
+
+    <select id="raca">
+
+        <option value="">
+            Selecione a raça
+        </option>
+
+        <option value="Nelore">
+            Nelore
+        </option>
+
+        <option value="Angus">
+            Angus
+        </option>
+
+        <option value="Brahman">
+            Brahman
+        </option>
+
+        <option value="Brangus">
+            Brangus
+        </option>
+
+        <option value="Guzerá">
+            Guzerá
+        </option>
+
+        <option value="Gir">
+            Gir
+        </option>
+
+        <option value="Girolando">
+            Girolando
+        </option>
+
+        <option value="Jersey">
+            Jersey
+        </option>
+
+        <option value="Holandês">
+            Holandês
+        </option>
+
+        <option value="Hereford">
+            Hereford
+        </option>
+
+        <option value="Tabapuã">
+            Tabapuã
+        </option>
+
+        <option value="Sindi">
+            Sindi
+        </option>
+
+        <option value="Caracu">
+            Caracu
+        </option>
+
+        <option value="Senepol">
+            Senepol
+        </option>
+
+        <option value="Canchim">
+            Canchim
+        </option>
+
+        <option value="Mestiço">
+            Mestiço
+        </option>
+
+        <option value="Outro">
+            Outro
+        </option>
+
+    </select>
+
+</div>
+
+
+        <div class="campo">
+
+            <label>
+                Sexo
+            </label>
+
+            <select id="sexo">
+
+                <option value="Macho">
+                    Macho
+                </option>
+
+                <option value="Fêmea">
+                    Fêmea
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="campo">
+
+            <label>
+                Peso (kg)
+            </label>
+
+            <input
+                type="number"
+                id="peso"
+                min="0"
+                step="0.1"
+            >
+
+        </div>
+
+
+        <div class="campo">
+
+            <label>
+                Pasto
+            </label>
+
+            <input
+                type="text"
+                id="pasto"
+                placeholder="Ex: Pasto 01"
+            >
+
+        </div>
+
+
+        <div class="campo">
+
+            <label>
+                Observações
+            </label>
+
+            <textarea
+                id="observacoes"
+                rows="4"
+            ></textarea>
+
+        </div>
+
+
+        <button type="submit">
+            💾 Salvar animal
+        </button>
+
+
+        <button
+            type="button"
+            onclick="voltarGado()"
+            class="botao-secundario"
+        >
+            ← Voltar
+        </button>
+
+
+    </form>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

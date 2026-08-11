@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Manejo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="topo">
+
+    <div>
+
+        <h1>
+            💉 Manejo
+        </h1>
+
+        <p>
+            Controle dos manejos
+        </p>
+
+    </div>
+
+    <button
+        class="botao-sair"
+        onclick="sair()"
+    >
+        🚪 Sair
+    </button>
+
+</header>
+
+
+<main class="dashboard">
+
+
+    <section class="painel">
+
+        <h2>
+            ➕ Registrar manejo
+        </h2>
+
+
+        <form id="formManejo">
+
+
+            <div class="campo">
+
+                <label>
+                    Tipo de manejo *
+                </label>
+
+                <select
+                    id="tipoManejo"
+                    required
+                >
+
+                    <option value="">
+                        Selecione
+                    </option>
+
+                    <option value="Vacinação">
+                        💉 Vacinação
+                    </option>
+
+                    <option value="Vermifugação">
+                        💊 Vermifugação
+                    </option>
+
+                    <option value="Pesagem">
+                        ⚖️ Pesagem
+                    </option>
+
+                    <option value="Consulta veterinária">
+                        🩺 Consulta veterinária
+                    </option>
+
+                    <option value="Medicação">
+                        💊 Medicação
+                    </option>
+
+                    <option value="Outro">
+                        📋 Outro
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>
+                    Animal *
+                </label>
+
+                <select
+                    id="animalManejo"
+                    required
+                >
+
+                    <option value="">
+                        Selecione um animal
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>
+                    Data *
+                </label>
+
+                <input
+                    type="date"
+                    id="dataManejo"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>
+                    Descrição
+                </label>
+
+                <textarea
+                    id="descricaoManejo"
+                    rows="4"
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit">
+                💾 Salvar manejo
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <h2>
+        📋 Histórico
+    </h2>
+
+
+    <div id="listaManejos"></div>
+
+
+    <button onclick="voltarInicio()">
+        🏠 Início
+    </button>
+
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Fazenda Control</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="topo">
+
+    <div>
+        <h1>🐂 Fazenda Control</h1>
+
+        <p>
+            Fazenda do Tio
+        </p>
+    </div>
+
+    <button
+        class="botao-sair"
+        onclick="sair()"
+    >
+        🚪 Sair
+    </button>
+
+</header>
+
+
+<main class="dashboard">
+
+
+    <!-- FOTO -->
+
+    <section class="foto-capa">
+
+        <img
+            src="img/fazenda.jpg"
+            alt="Foto da fazenda"
+            onerror="this.style.display='none'"
+        >
+
+        <div class="foto-texto">
+
+            <h2>
+                Fazenda do Tio
+            </h2>
+
+            <p>
+                Controle do rebanho e da propriedade
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESUMO -->
+
+    <section class="resumo">
+
+
+        <div
+            class="card-resumo"
+            onclick="abrirGado()"
+        >
+
+            <div class="icone">
+                🐂
+            </div>
+
+            <h2 id="totalBovinos">
+                0
+            </h2>
+
+            <p>
+                Bovinos
+            </p>
+
+        </div>
+
+
+        <div
+            class="card-resumo"
+            onclick="abrirPastos()"
+        >
+
+            <div class="icone">
+                🌱
+            </div>
+
+            <h2 id="totalPastos">
+                0
+            </h2>
+
+            <p>
+                Pastos
+            </p>
+
+        </div>
+
+
+        <div
+            class="card-resumo"
+            onclick="abrirManejo()"
+        >
+
+            <div class="icone">
+                💉
+            </div>
+
+            <h2 id="totalManejos">
+                0
+            </h2>
+
+            <p>
+                Manejos
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU -->
+
+    <section class="menu-principal">
+
+        <button onclick="abrirGado()">
+            🐂
+            <span>Rebanho</span>
+        </button>
+
+        <button onclick="abrirPastos()">
+            🌱
+            <span>Pastos</span>
+        </button>
+
+        <button onclick="abrirManejo()">
+            💉
+            <span>Manejo</span>
+        </button>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    Fazenda Control • Controle inteligente da propriedade
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
