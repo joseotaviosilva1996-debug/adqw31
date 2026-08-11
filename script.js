@@ -1677,3 +1677,1038 @@ function sair() {
     window.location.href = "index.html";
 
 }
+// ======================================================
+// COMPRA DE GADO
+// ======================================================
+
+
+function pegarCompras() {
+
+    return pegarDados("compras");
+
+}
+
+
+// ======================================================
+// FORMULÁRIO DE COMPRA
+// ======================================================
+
+const formCompra =
+    document.getElementById("formCompra");
+
+
+if (formCompra) {
+
+
+    const dataCompra =
+        document.getElementById("dataCompra");
+
+
+    // Coloca a data atual automaticamente
+
+    if (dataCompra && !dataCompra.value) {
+
+        const hoje =
+            new Date();
+
+        const ano =
+            hoje.getFullYear();
+
+        const mes =
+            String(
+                hoje.getMonth() + 1
+            ).padStart(2, "0");
+
+        const dia =
+            String(
+                hoje.getDate()
+            ).padStart(2, "0");
+
+        dataCompra.value =
+            `${ano}-${mes}-${dia}`;
+
+    }
+
+
+    formCompra.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const tipo =
+                document
+                .getElementById("tipoGado")
+                .value;
+
+
+            const quantidade =
+                Number(
+                    document
+                    .getElementById(
+                        "quantidadeGado"
+                    )
+                    .value
+                );
+
+
+            const pesoInicial =
+                Number(
+                    document
+                    .getElementById(
+                        "pesoInicial"
+                    )
+                    .value
+                );
+
+
+            const precoCompraKg =
+                Number(
+                    document
+                    .getElementById(
+                        "precoCompraKg"
+                    )
+                    .value
+                );
+
+
+            const data =
+                document
+                .getElementById(
+                    "dataCompra"
+                )
+                .value;
+
+
+            const racaoDia =
+                Number(
+                    document
+                    .getElementById(
+                        "racaoDia"
+                    )
+                    .value
+                );
+
+
+            const precoRacao =
+                Number(
+                    document
+                    .getElementById(
+                        "precoRacao"
+                    )
+                    .value
+                );
+
+
+            const diasEngorda =
+                Number(
+                    document
+                    .getElementById(
+                        "diasEngorda"
+                    )
+                    .value
+                );
+
+
+            const medicamentos =
+                Number(
+                    document
+                    .getElementById(
+                        "medicamentos"
+                    )
+                    .value
+                ) || 0;
+
+
+            const transporte =
+                Number(
+                    document
+                    .getElementById(
+                        "transporte"
+                    )
+                    .value
+                ) || 0;
+
+
+            const outrosGastos =
+                Number(
+                    document
+                    .getElementById(
+                        "outrosGastos"
+                    )
+                    .value
+                ) || 0;
+
+
+            const pesoVenda =
+                Number(
+                    document
+                    .getElementById(
+                        "pesoVenda"
+                    )
+                    .value
+                );
+
+
+            const precoVendaKg =
+                Number(
+                    document
+                    .getElementById(
+                        "precoVendaKg"
+                    )
+                    .value
+                );
+
+
+            // ==================================================
+            // VALIDAÇÕES
+            // ==================================================
+
+            if (
+                quantidade <= 0 ||
+                pesoInicial <= 0 ||
+                precoCompraKg < 0 ||
+                racaoDia < 0 ||
+                precoRacao < 0 ||
+                diasEngorda < 0 ||
+                pesoVenda <= 0 ||
+                precoVendaKg < 0
+            ) {
+
+                alert(
+                    "⚠️ Verifique os valores informados."
+                );
+
+                return;
+
+            }
+
+
+            // ==================================================
+            // CÁLCULOS
+            // ==================================================
+
+            const pesoTotalInicial =
+                quantidade *
+                pesoInicial;
+
+
+            const valorCompra =
+                pesoTotalInicial *
+                precoCompraKg;
+
+
+            const racaoTotalAnimal =
+                racaoDia *
+                diasEngorda;
+
+
+            const racaoTotalLote =
+                racaoTotalAnimal *
+                quantidade;
+
+
+            const custoRacao =
+                racaoTotalLote *
+                precoRacao;
+
+
+            const outrosCustos =
+                medicamentos +
+                transporte +
+                outrosGastos;
+
+
+            const investimentoTotal =
+                valorCompra +
+                custoRacao +
+                outrosCustos;
+
+
+            const pesoTotalVenda =
+                quantidade *
+                pesoVenda;
+
+
+            const receitaVenda =
+                pesoTotalVenda *
+                precoVendaKg;
+
+
+            const lucroPrejuizo =
+                receitaVenda -
+                investimentoTotal;
+
+
+            let margem = 0;
+
+
+            if (investimentoTotal > 0) {
+
+                margem =
+                    (
+                        lucroPrejuizo /
+                        investimentoTotal
+                    ) * 100;
+
+            }
+
+
+            const custoPorAnimal =
+                investimentoTotal /
+                quantidade;
+
+
+            const receitaPorAnimal =
+                receitaVenda /
+                quantidade;
+
+
+            const compra = {
+
+                id:
+                    Date.now().toString(),
+
+                tipo:
+                    tipo,
+
+                quantidade:
+                    quantidade,
+
+                pesoInicial:
+                    pesoInicial,
+
+                precoCompraKg:
+                    precoCompraKg,
+
+                data:
+                    data,
+
+                racaoDia:
+                    racaoDia,
+
+                precoRacao:
+                    precoRacao,
+
+                diasEngorda:
+                    diasEngorda,
+
+                racaoTotalLote:
+                    racaoTotalLote,
+
+                custoRacao:
+                    custoRacao,
+
+                medicamentos:
+                    medicamentos,
+
+                transporte:
+                    transporte,
+
+                outrosGastos:
+                    outrosGastos,
+
+                pesoVenda:
+                    pesoVenda,
+
+                precoVendaKg:
+                    precoVendaKg,
+
+                pesoTotalInicial:
+                    pesoTotalInicial,
+
+                valorCompra:
+                    valorCompra,
+
+                outrosCustos:
+                    outrosCustos,
+
+                investimentoTotal:
+                    investimentoTotal,
+
+                pesoTotalVenda:
+                    pesoTotalVenda,
+
+                receitaVenda:
+                    receitaVenda,
+
+                lucroPrejuizo:
+                    lucroPrejuizo,
+
+                margem:
+                    margem,
+
+                custoPorAnimal:
+                    custoPorAnimal,
+
+                receitaPorAnimal:
+                    receitaPorAnimal
+
+            };
+
+
+            const compras =
+                pegarCompras();
+
+
+            compras.push(
+                compra
+            );
+
+
+            salvarDados(
+                "compras",
+                compras
+            );
+
+
+            mostrarResultadoCompra(
+                compra
+            );
+
+
+            mostrarCompras();
+
+
+            alert(
+                "✅ Compra registrada com sucesso!"
+            );
+
+
+            formCompra.reset();
+
+
+            if (dataCompra) {
+
+                const hoje =
+                    new Date();
+
+                const ano =
+                    hoje.getFullYear();
+
+                const mes =
+                    String(
+                        hoje.getMonth() + 1
+                    ).padStart(2, "0");
+
+                const dia =
+                    String(
+                        hoje.getDate()
+                    ).padStart(2, "0");
+
+                dataCompra.value =
+                    `${ano}-${mes}-${dia}`;
+
+            }
+
+        }
+    );
+
+}
+
+
+// ======================================================
+// MOSTRAR RESULTADO
+// ======================================================
+
+function mostrarResultadoCompra(compra) {
+
+    const resultado =
+        document.getElementById(
+            "resultadoCompra"
+        );
+
+
+    if (!resultado) {
+
+        return;
+
+    }
+
+
+    const positivo =
+        compra.lucroPrejuizo >= 0;
+
+
+    const classeResultado =
+        positivo
+        ? "resultado-lucro"
+        : "resultado-prejuizo";
+
+
+    const textoResultado =
+        positivo
+        ? "LUCRO ESTIMADO"
+        : "PREJUÍZO ESTIMADO";
+
+
+    resultado.innerHTML = `
+
+        <div class="resultado-cabecalho">
+
+            <h2>
+                📊 Resultado da compra
+            </h2>
+
+        </div>
+
+
+        <div class="resultado-status ${classeResultado}">
+
+            <span>
+                ${positivo ? "🟢" : "🔴"}
+            </span>
+
+            <div>
+
+                <strong>
+                    ${textoResultado}
+                </strong>
+
+                <h2>
+                    ${formatarMoeda(
+                        compra.lucroPrejuizo
+                    )}
+                </h2>
+
+                <p>
+                    Margem estimada:
+                    ${compra.margem.toFixed(2)}%
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="resultado-grid">
+
+
+            <div class="resultado-card">
+
+                <span>
+                    🐂 Animais
+                </span>
+
+                <strong>
+                    ${compra.quantidade}
+                </strong>
+
+            </div>
+
+
+            <div class="resultado-card">
+
+                <span>
+                    ⚖️ Peso inicial
+                </span>
+
+                <strong>
+                    ${compra.pesoTotalInicial.toFixed(2)} kg
+                </strong>
+
+            </div>
+
+
+            <div class="resultado-card">
+
+                <span>
+                    💰 Compra
+                </span>
+
+                <strong>
+                    ${formatarMoeda(
+                        compra.valorCompra
+                    )}
+                </strong>
+
+            </div>
+
+
+            <div class="resultado-card">
+
+                <span>
+                    🌾 Ração
+                </span>
+
+                <strong>
+                    ${compra.racaoTotalLote.toFixed(2)} kg
+                </strong>
+
+            </div>
+
+
+            <div class="resultado-card">
+
+                <span>
+                    💵 Custo da ração
+                </span>
+
+                <strong>
+                    ${formatarMoeda(
+                        compra.custoRacao
+                    )}
+                </strong>
+
+            </div>
+
+
+            <div class="resultado-card">
+
+                <span>
+                    📦 Investimento total
+                </span>
+
+                <strong>
+                    ${formatarMoeda(
+                        compra.investimentoTotal
+                    )}
+                </strong>
+
+            </div>
+
+
+            <div class="resultado-card">
+
+                <span>
+                    ⚖️ Peso para venda
+                </span>
+
+                <strong>
+                    ${compra.pesoTotalVenda.toFixed(2)} kg
+                </strong>
+
+            </div>
+
+
+            <div class="resultado-card">
+
+                <span>
+                    💰 Receita estimada
+                </span>
+
+                <strong>
+                    ${formatarMoeda(
+                        compra.receitaVenda
+                    )}
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="detalhes-custos">
+
+            <h3>
+                💸 Detalhamento dos gastos
+            </h3>
+
+
+            <p>
+                Compra dos animais:
+                <strong>
+                    ${formatarMoeda(
+                        compra.valorCompra
+                    )}
+                </strong>
+            </p>
+
+
+            <p>
+                Ração:
+                <strong>
+                    ${formatarMoeda(
+                        compra.custoRacao
+                    )}
+                </strong>
+            </p>
+
+
+            <p>
+                Medicamentos/vacinas:
+                <strong>
+                    ${formatarMoeda(
+                        compra.medicamentos
+                    )}
+                </strong>
+            </p>
+
+
+            <p>
+                Transporte:
+                <strong>
+                    ${formatarMoeda(
+                        compra.transporte
+                    )}
+                </strong>
+            </p>
+
+
+            <p>
+                Outros gastos:
+                <strong>
+                    ${formatarMoeda(
+                        compra.outrosGastos
+                    )}
+                </strong>
+            </p>
+
+
+            <hr>
+
+
+            <p class="total-destaque">
+
+                Investimento total:
+
+                <strong>
+                    ${formatarMoeda(
+                        compra.investimentoTotal
+                    )}
+                </strong>
+
+            </p>
+
+
+        </div>
+
+    `;
+
+}
+
+
+// ======================================================
+// HISTÓRICO DE COMPRAS
+// ======================================================
+
+function mostrarCompras() {
+
+    const lista =
+        document.getElementById(
+            "listaCompras"
+        );
+
+
+    if (!lista) {
+
+        return;
+
+    }
+
+
+    const compras =
+        pegarCompras();
+
+
+    lista.innerHTML = "";
+
+
+    if (compras.length === 0) {
+
+        lista.innerHTML = `
+
+            <div class="card">
+
+                <h2>
+                    🛒 Nenhuma compra registrada
+                </h2>
+
+                <p>
+                    Cadastre sua primeira compra de gado.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    compras
+        .slice()
+        .reverse()
+        .forEach(
+            function(compra) {
+
+
+                const positivo =
+                    compra.lucroPrejuizo >= 0;
+
+
+                const card =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                card.className =
+                    "compra-historico-card";
+
+
+                card.innerHTML = `
+
+                    <div class="compra-historico-topo">
+
+                        <div>
+
+                            <h3>
+                                🐂 ${compra.tipo}
+                            </h3>
+
+                            <p>
+                                ${compra.quantidade}
+                                animal(is)
+                            </p>
+
+                        </div>
+
+
+                        <span
+                            class="${
+                                positivo
+                                ? "tag-lucro"
+                                : "tag-prejuizo"
+                            }"
+                        >
+
+                            ${
+                                positivo
+                                ? "🟢 Lucro"
+                                : "🔴 Prejuízo"
+                            }
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="compra-historico-dados">
+
+                        <p>
+
+                            <strong>
+                                Compra:
+                            </strong>
+
+                            ${formatarMoeda(
+                                compra.valorCompra
+                            )}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Investimento:
+                            </strong>
+
+                            ${formatarMoeda(
+                                compra.investimentoTotal
+                            )}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Receita:
+                            </strong>
+
+                            ${formatarMoeda(
+                                compra.receitaVenda
+                            )}
+
+                        </p>
+
+
+                        <p>
+
+                            <strong>
+                                Resultado:
+                            </strong>
+
+                            ${formatarMoeda(
+                                compra.lucroPrejuizo
+                            )}
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="compra-acoes">
+
+                        <button
+                            onclick="verRelatorioCompra('${compra.id}')"
+                        >
+                            📊 Ver relatório
+                        </button>
+
+
+                        <button
+                            class="botao-perigo"
+                            onclick="excluirCompra('${compra.id}')"
+                        >
+                            🗑️ Excluir
+                        </button>
+
+                    </div>
+
+                `;
+
+
+                lista.appendChild(
+                    card
+                );
+
+            }
+        );
+
+}
+
+
+// ======================================================
+// VER RELATÓRIO
+// ======================================================
+
+function verRelatorioCompra(id) {
+
+    const compras =
+        pegarCompras();
+
+
+    const compra =
+        compras.find(
+            function(item) {
+
+                return item.id === id;
+
+            }
+        );
+
+
+    if (!compra) {
+
+        alert(
+            "Compra não encontrada."
+        );
+
+        return;
+
+    }
+
+
+    mostrarResultadoCompra(
+        compra
+    );
+
+
+    const resultado =
+        document.getElementById(
+            "resultadoCompra"
+        );
+
+
+    if (resultado) {
+
+        resultado.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }
+
+}
+
+
+// ======================================================
+// EXCLUIR COMPRA
+// ======================================================
+
+function excluirCompra(id) {
+
+    const confirmar =
+        confirm(
+            "⚠️ Deseja realmente excluir esta compra?"
+        );
+
+
+    if (!confirmar) {
+
+        return;
+
+    }
+
+
+    const compras =
+        pegarCompras();
+
+
+    const novasCompras =
+        compras.filter(
+            function(compra) {
+
+                return compra.id !== id;
+
+            }
+        );
+
+
+    salvarDados(
+        "compras",
+        novasCompras
+    );
+
+
+    mostrarCompras();
+
+
+    const resultado =
+        document.getElementById(
+            "resultadoCompra"
+        );
+
+
+    if (resultado) {
+
+        resultado.innerHTML = "";
+
+    }
+
+
+    alert(
+        "🗑️ Compra excluída."
+    );
+
+}
+
+
+// ======================================================
+// FORMATAÇÃO DE DINHEIRO
+// ======================================================
+
+function formatarMoeda(valor) {
+
+    return Number(valor || 0)
+        .toLocaleString(
+            "pt-BR",
+            {
+                style: "currency",
+                currency: "BRL"
+            }
+        );
+
+}
+
+
+// ======================================================
+// INICIALIZAR HISTÓRICO
+// ======================================================
+
+mostrarCompras();
