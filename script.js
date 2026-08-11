@@ -1684,3 +1684,20 @@ function sair() {
     window.location.href = "login.html";
 
 }
+function abrirMenu() {
+    document.getElementById("menuLateral").classList.add("ativo");
+    document.getElementById("fundoMenu").classList.add("ativo");
+}
+
+function fecharMenu() {
+    document.getElementById("menuLateral").classList.remove("ativo");
+    document.getElementById("fundoMenu").classList.remove("ativo");
+}
+
+function irPara(pagina) {
+    window.location.href = pagina;
+}
+
+function sair() {
+    fecharMenu();
+}
